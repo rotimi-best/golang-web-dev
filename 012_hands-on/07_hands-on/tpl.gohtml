@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    {{range .}}
+        {{.Name}}  works from {{.WorkingHour}}
+        {{$allowedCurr := .AllowedCurrency}}
+        Menu:
+        {{ range .Menu}}
+            {{.Name}}
+            {{.Details.Name}}
+            {{.Details.Ingredients}}
+            {{.Details.Price}} {{$allowedCurr}}
+        {{end}}
+    {{end}}
+</body>
+</html>
