@@ -5,12 +5,29 @@
     <title>Document</title>
 </head>
 <body>
-
 {{range .}}
-
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
-
+    <div class="calendar">
+        <h1>Welcome to year {{.AcaYear}}</h1>
+        <h4>Courses to expect this {{.Fall.Term}}</h4>
+        <ul>
+            {{range .Fall.Courses}}
+                <ol>Number: {{.Number}} | Name: {{.Name}} | Units: {{.Units}}</ol>
+            {{end}}
+        </ul>
+        <hr>
+        <h4>Courses to expect this {{.Spring.Term}}</h4>
+        <ul>
+            {{range .Spring.Courses}}
+                <ol>Number: {{.Number}} | Name: {{.Name}} | Units: {{.Units}}</ol>
+            {{end}}
+        </ul>
+        <h4>Courses to expect this {{.Summer.Term}}</h4>
+        <ul>
+            {{range .Summer.Courses}}
+                <ol>Number: {{.Number}} | Name: {{.Name}} | Units: {{.Units}}</ol>
+            {{end}}
+        </ul>
+    </div>
 {{end}}
-
 </body>
 </html>
