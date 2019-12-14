@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Hotel Registry</h1>
+    {{range .}}
+        <p>Holtels in the {{.Region}} region</p>
+        <ul>
+            {{range .Hotels}}
+                <ol>Name: {{.Name}}</ol>
+                <ol>Address: {{.Address}}</ol>
+                <ol>City: {{.City}}</ol>
+                <ol>Zip: {{.Zip}}</ol>
+                <ol>Region: {{.Region}}</ol>
+            {{end}}
+        </ul>
+    {{end}}
+</body>
+</html>
